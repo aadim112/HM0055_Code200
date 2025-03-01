@@ -141,7 +141,7 @@ const AppointmentPage = () => {
                 id="doctorSelect"
                 value={selectedDoctor}
                 onChange={(e) => setSelectedDoctor(e.target.value)}
-                required
+                
                 disabled={loading}
               >
                 <option value="" disabled>
@@ -152,6 +152,7 @@ const AppointmentPage = () => {
                     {doctor.name} ({doctor.specialty})
                   </option>
                 ))}
+                <option>Dr Desuza</option>
               </select>
               {doctors.length === 0 && !loading && (
                 <p className="error-message">Unable to load doctors. Please try again later.</p>
