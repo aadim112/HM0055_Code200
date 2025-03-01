@@ -1,45 +1,278 @@
-.admin{
+/* Base styles for the admin page */
+.admin {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Medical patient search section */
+.medical-patient-search {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.medical-patient-search p {
+  font-weight: 600;
+  margin: 0 1rem 0 0;
+  color: #334155;
+  min-width: 160px;
+}
+
+.medical-patient-search input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.medical-patient-search input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.medical-patient-search button {
+  margin-left: 1rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.medical-patient-search button:hover {
+  background-color: #0284c7;
+}
+
+/* Medical data section */
+.medical-data {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.medical-data h3 {
+  margin-top: 0;
+  color: #0ea5e9;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.medical-data p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #475569;
+}
+
+.medical-data strong {
+  color: #334155;
+}
+
+/* Add medicine section */
+.Add-medicine {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.Add-medicine h3 {
+  margin-top: 0;
+  color: #0ea5e9;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.Add-medicine select, 
+.Add-medicine input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  margin-right: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.Add-medicine select {
+  min-width: 200px;
+}
+
+.Add-medicine input {
+  width: 100px;
+}
+
+.Add-medicine select:focus,
+.Add-medicine input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.Add-medicine button {
+  padding: 0.75rem 1.5rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.Add-medicine button:hover {
+  background-color: #059669;
+}
+
+/* Added medicines section */
+.added-medicine {
+  padding: 1.5rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.added-medicine h3 {
+  margin-top: 0;
+  color: #0ea5e9;
+  font-size: 1.25rem;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 0.75rem;
+}
+
+.entries {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.entries:first-of-type {
+  font-weight: 600;
+  color: #334155;
+  background-color: #f1f5f9;
+  padding: 1rem 0;
+  border-radius: 6px;
+}
+
+.entries p {
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+  color: #475569;
+}
+
+.added-medicine button {
+  padding: 0.75rem 1.5rem;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  display: block;
+  margin-left: auto;
+}
+
+.added-medicine button:hover {
+  background-color: #4f46e5;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .medical-patient-search {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .medical-patient-search p {
+    margin-bottom: 0.5rem;
+  }
+  
+  .medical-patient-search input {
     width: 100%;
-    height: auto;
-    margin-top: 40px;
+    margin-bottom: 0.5rem;
   }
-  .patient-search p{
-    margin-top: 20px;
-    font-size: bold;
+  
+  .medical-patient-search button {
+    margin-left: 0;
+    width: 100%;
   }
-  .medical-patient-search{
-    width: auto;
-    margin-left: 20px;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    height: auto;
+  
+  .entries {
+    grid-template-columns: 1fr;
+    text-align: left;
+    padding: 0.5rem;
   }
-  .medical-patient-search input{
-    height: 20px;
-    width: 250px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 0px;
+  
+  .entries p {
+    text-align: left;
+    padding: 0.25rem 0;
+    border-bottom: 1px dashed #e2e8f0;
   }
-  .medical-patient-search button{
-    height: 35px;
-    width: 100px;
-    border: 0px;
-    border-radius: 5px;
-    font-family: poppins;
-    background-color: #03045e;
-    color: white;
-    cursor: pointer;
+  
+  .entries:first-of-type p {
+    background-color: #f1f5f9;
   }
-  .medical-data{
-    width: 900px;
-    height: auto;
-    margin-left: 20px;
-  }
-  .Add-medicine{
-    width: 800px;
-    height: 40px;
-    background-color: #03045e;
-    margin-left: 20px;
-  }
+}
+
+/* Style for the delete button */
+.delete-btn {
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #d32f2f;
+}
+
+/* Style for disabled medicine selection controls */
+.Add-medicine select:disabled,
+.Add-medicine input:disabled,
+.Add-medicine button:disabled {
+  background-color: #f0f0f0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Style for confirm upload button */
+.confirm-upload-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.confirm-upload-btn:hover {
+  background-color: #388E3C;
+}

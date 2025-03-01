@@ -1,172 +1,269 @@
-.chose-type{
-    display: flex;
-    height: 50px;
-    align-items: center;
-    margin-left: 30px;
-  }
-.chose-type a{
-    margin-left: 10px;
-    font-size: 12px;
-    margin-top: 5px;
-  }
-  .file-upload{
-    display: none;
-  }
-  .label-file{
-    width: 80%;
-    height: 30px;
-    background-color: white;
-    color: black;
-    padding: 10px;
-    border-radius: 9px;
-    display: flex;
-    align-items: center;
-    border: 1px dashed black;
-  }
-.account-div{
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 30px;
-  }
-.login-div{
-    width: 400px;
-    height: auto;
-    margin-right: 30px;
-    background-color: #f1faee;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 10px;
-    border-radius: 9px;
-  }
-.login-div h3{
-    margin-left: 10px;
-    margin-bottom: 0px;
-  }
-.login-div span{
-    margin-left: 10px;
-    font-size: 12px;
-    font-weight: bold;
-  }
-.login-form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-left: 10px;
-  }
-.login-form input{
-    width: 70%;
-    height: 30px;
-    border: 7px;
-    padding: 10px ;
-    border-radius: 9px;
-    border: 0px;
-  }
-.login-form input:focus{
-    outline: none;
-  }
-.login-form button{
-    width: 30%;
-    height: 40px;
-    background-color: #03045e;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: bold;
-  }
-.register-div{
-    width: 800px;
-    height: auto;
-    margin-right: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding-bottom: 10px;
-    background-color: #f1faee;
-    border-radius: 9px;
-  }
-.register-form{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-left: 10px;
-    margin-left: 10px;
-  }
-.register-form h3{
-    margin-bottom: 0px;
-  }
-.register-form p{
-    margin: 0px;
-    font-size: 12px;
-    color: red;
-  }
-.special-register-container{
-    display: grid;
-    gap: 10px ;
-    grid-template-columns: auto auto auto ;
-    grid-template-rows: auto auto auto;
-  }
-.input-container{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
+/* Account Container */
+.account-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-.input-container label{
-    font-size: 12px;
-    font-weight: bold;
-  }
-.input-container input{
-    width: 80%;
-    height: 30px;
-    padding: 10px ;
-    border-radius: 9px;
-    border: 0px;
-  }
-.input-container select{
-    width: 90%;
-    height: 50px;
-    border-radius: 9px;
-    border: 0px;
-    padding: 10px;
-    border-radius: 9px;
-  }
-.input-container select:focus{
-    outline: none;
-  }
-.add-disease{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
+/* Account Type Selector */
+.chose-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #e2e8f0;
+}
 
-.disease-list{
-    width: auto;
-    display: flex;
-    gap: 10px;
+.chose-type h2 {
+  color: #0ea5e9;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.chose-type a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background-color: #eff6ff;
+}
+
+.chose-type a:hover {
+  color: #4f46e5;
+  background-color: #dbeafe;
+}
+
+/* Account Div (Container for Login/Register Forms) */
+.account-div {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+}
+
+/* Login Form Styles */
+.login-div h3, 
+.register-div h3 {
+  color: #0ea5e9;
+  font-size: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.login-form label {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+.login-form input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  margin-bottom: 1.25rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.login-form input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+.login-form button,
+.register-form button {
+  padding: 0.75rem 1.5rem;
+  background-color: #0ea5e9;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 0.5rem;
+}
+
+.login-form button:hover,
+.register-form button:hover {
+  background-color: #0284c7;
+}
+
+/* Register Form Styles */
+.register-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form p {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.special-register-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 0.5rem;
+}
+
+.input-container input,
+.input-container select {
+  padding: 0.75rem 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.input-container input:focus,
+.input-container select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+}
+
+/* File Upload Styling */
+.file-upload {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.label-file {
+  display: inline-block;
+  padding: 0.75rem 1rem;
+  background-color: #f1f5f9;
+  color: #334155;
+  border: 1px dashed #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: normal;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.label-file:hover {
+  background-color: #e2e8f0;
+  border-color: #94a3b8;
+}
+
+/* Disease Selection Styling */
+.add-disease {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.add-disease select {
+  flex: 1;
+}
+
+.add-disease button {
+  padding: 0.75rem 1.25rem;
+  background-color: #10b981;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.add-disease button:hover {
+  background-color: #059669;
+}
+
+/* Disease List Styling */
+.disease-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.disease-list div {
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+/* Login/Register Toggle Link */
+.login-div span,
+.register-div span {
+  display: block;
+  text-align: center;
+  margin-top: 1.5rem;
+  color: #64748b;
+  font-size: 0.875rem;
+}
+
+.login-div span a,
+.register-div span a {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.login-div span a:hover,
+.register-div span a:hover {
+  color: #4f46e5;
+  text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .account-container {
+    padding: 1.5rem;
+    margin: 1rem;
   }
-.disease-list div{
-    background-color: white;
-    padding: 10px;
-    border-radius: 8px;
+  
+  .special-register-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
   }
-.register-form button{
-    width: 30%;
-    height: 40px;
-    background-color: #03045e;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 6px;
-    font-weight: bold;
+  
+  .chose-type {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
   }
-.register-div span{
-    margin-left: 10px;
-    font-size: 12px;
-    font-weight: bold;
+  
+  .account-div {
+    padding: 1.5rem;
   }
+}

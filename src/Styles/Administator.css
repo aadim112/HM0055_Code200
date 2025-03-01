@@ -1,5 +1,237 @@
-.Inventory{
+/* Main Inventory container styles */
+.Inventory {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #f8fafc;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .Inventory h2 {
+    color: #0ea5e9;
+    font-size: 1.75rem;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+  }
+  
+  /* Table for displaying added medicines */
+  .added-medicine {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    overflow-x: auto;
+  }
+  
+  .entries {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #e2e8f0;
+  }
+  
+  .entries:first-of-type {
+    font-weight: 600;
+    color: #334155;
+    background-color: #f1f5f9;
+    padding: 1rem 0;
+    border-radius: 6px;
+  }
+  
+  .entries p {
+    margin: 0;
+    padding: 0.5rem;
+    text-align: center;
+    color: #475569;
+  }
+  
+  /* Add medicine and Upload buttons */
+  .Add-entry {
+    padding: 0.75rem 1.5rem;
+    background-color: #10b981;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .Add-entry:hover {
+    background-color: #059669;
+  }
+  
+  .Add-entry:nth-of-type(2) {
+    background-color: #6366f1;
+  }
+  
+  .Add-entry:nth-of-type(2):hover {
+    background-color: #4f46e5;
+  }
+  
+  /* Medicine form modal container */
+  .medicine-form-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  /* Medicine form styles */
+  .medicine-form {
+    background-color: white;
+    border-radius: 10px;
+    padding: 2rem;
     width: 100%;
-    height: auto;
-    padding-bottom: 20px;
-}
+    max-width: 500px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .medicine-form p {
+    color: #0ea5e9;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e2e8f0;
+    padding-bottom: 0.75rem;
+  }
+  
+  .medicine-input-cont {
+    margin-bottom: 1.25rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .medicine-input-cont label {
+    font-weight: 600;
+    color: #334155;
+    width: 140px;
+    flex-shrink: 0;
+  }
+  
+  .medicine-input-cont input,
+  .medicine-input-cont select {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s;
+  }
+  
+  .medicine-input-cont input:focus,
+  .medicine-input-cont select:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+  }
+  
+  .medicine-input-cont span {
+    margin-left: 0.5rem;
+    color: #6b7280;
+  }
+  
+  .medicine-input-cont span p {
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
+    border-bottom: none;
+    color: #6b7280;
+  }
+  
+  /* Form buttons */
+  .medicine-form button {
+    margin-right: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .medicine-form button[type="submit"] {
+    background-color: #10b981;
+    color: white;
+  }
+  
+  .medicine-form button[type="submit"]:hover {
+    background-color: #059669;
+  }
+  
+  .medicine-form button[type="button"] {
+    background-color: #f43f5e;
+    color: white;
+  }
+  
+  .medicine-form button[type="button"]:hover {
+    background-color: #e11d48;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .entries {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .entries:first-of-type {
+      display: none;
+    }
+    
+    .entries p {
+      position: relative;
+      padding-left: 8rem;
+      text-align: left;
+      border-bottom: 1px dashed #e2e8f0;
+    }
+    
+    .entries p::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0.5rem;
+      font-weight: 600;
+      color: #334155;
+    }
+    
+    .medicine-input-cont {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    
+    .medicine-input-cont label {
+      margin-bottom: 0.5rem;
+      width: 100%;
+    }
+    
+    .medicine-input-cont input,
+    .medicine-input-cont select {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .entries {
+      grid-template-columns: 1fr;
+    }
+    
+    .Add-entry {
+      width: 100%;
+      margin-bottom: 0.75rem;
+    }
+    
+    .Add-entry:nth-of-type(2) {
+      margin-left: 0 !important;
+    }
+  }
