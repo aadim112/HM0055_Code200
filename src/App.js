@@ -8,10 +8,10 @@ import DoctorHome from './Components/DoctorHome'
 import AppointmentPage from './Components/AppointmentPage';
 import Administrator from './Components/Administrator';
 import PatientHome from './Components/PatientHome';
-import Notification from './Components/Notification';
 import HospitalHome from './Components/HospitalHome';
 import Institution from './Components/Institution';
 import Contact from './Components/Contact';
+import Footer from './Components/Footer';
 
 function App() {
   return (
@@ -43,6 +43,7 @@ function App() {
       <Route path='/InstituteAction' element={<HospitalHome/>}></Route>
       <Route path='/Institute' element={<Institution/>}></Route>
     </Routes>
+    <Footer/>
   </>
   );
 }
