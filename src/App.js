@@ -6,6 +6,7 @@ import Account from './Components/Account';
 import Admin from './Components/Admin';
 import DoctorHome from './Components/DoctorHome'
 import AppointmentPage from './Components/Administrator';
+import Administrator from './Components/Administrator';
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Link to='/Account'><i class="fa-solid fa-calendar-check" style={{color: '#ffffff',marginRight:'5px'}}></i>Search Doctor</Link>
         <Link to='/Account'><i class="fa-solid fa-phone" style={{color: '#ffffff',marginRight:'5px'}}></i>Contact</Link>
         <Link to='/Admin'><i class="fa-solid fa-user-tie" style={{color: '#ffffff',marginRight:'5px'}}></i>Admin</Link>
+        <Link to='/Administator'>Administator</Link>
       </div>
     </header>
     <Routes>
@@ -32,6 +34,7 @@ function App() {
       {/* <Route path='/PatientPanel' element={<PatientHome/>}></Route> */}
       <Route path='/bookappointment' element={<AppointmentPage/>}></Route>
       {/* <Route path='/SearchDoctorPage' element={<SearchDoctorPage/>}></Route> */}
+      <Route path='/Administator' element={<Administrator/>}></Route>
     </Routes>
   </>
   );
