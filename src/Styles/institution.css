@@ -229,3 +229,17 @@
     width: 250px;
     height: auto;
 }
+@media(max-width:600px){
+  .hospital-auth-card{
+    padding: 20px;
+  }
+  .form-group input{
+    width: 80%;
+  }
+  .hospital-auth-container{
+    display: flex;
+    justify-content: center;
+    min-height:0px;
+    background-color: white;
+  }
+}

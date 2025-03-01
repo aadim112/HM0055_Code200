@@ -44,6 +44,10 @@ const Account = () => {
     
         document.getElementById('disease').value = ''; // Clear input after adding
     };
+    const removeDisease = (disease) => {
+        setDiseaseList(prevList => prevList.filter(item => item !== disease));
+    };
+    
     
     const handleaccount = (e) => {
         e.preventDefault();
@@ -404,10 +408,12 @@ const Account = () => {
                     </div>
                     {diseaselist.length > 0 && 
                             <div className='disease-list'>
-                                {diseaselist.map((disease,index)=>(
-                                    <div key={index}>{disease}</div>
-                                ))}
-                            </div>
+                            {diseaselist.map((disease, index) => (
+                                <div key={index} onClick={() => removeDisease(disease)} style={{cursor:'pointer'}} className="disease-item">
+                                    {disease} <i class="fa-solid fa-xmark"></i>
+                                </div>
+                            ))}
+                        </div>
                             }
                     <button type='submit' id='rsubmit'>{processing ? 'Registering...':'Register'}</button>
                 </form>

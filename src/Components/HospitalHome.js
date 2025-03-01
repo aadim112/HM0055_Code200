@@ -3,6 +3,7 @@ import { set, ref, get, child } from 'firebase/database';
 import { createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
 import { useNavigate } from 'react-router-dom';
 import db, { auth } from '../firebase';
+import '../App.css'
 import '../Styles/hospital.css';
 
 const HospitalHome = () => {

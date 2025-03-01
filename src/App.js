@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from '../src/Assets/logo-main.png';
 import './App.css';
 import { HashRouter,Router,Route,Link, Routes } from 'react-router-dom';
 import Home from './Components/Home';
@@ -19,7 +19,7 @@ function App() {
     <header>
       <div className='logo-div'>
         <img src={logo} className='App-logo' alt='logo'/>
-        <h1>React App</h1>
+        <h1>MEDILOG</h1>
       </div>
       <div className='nav-div'>
         <Link to='/'><i class="fa-solid fa-house" style={{color: '#ffffff',marginRight:'5px'}}></i>Home</Link>
@@ -27,7 +27,7 @@ function App() {
         <Link to='/bookappointment'><i class="fa-solid fa-calendar-check" style={{color: '#ffffff',marginRight:'5px'}}></i>Book Appointment</Link>
         {/* <Link to='/Account'><i class="fa-solid fa-calendar-check" style={{color: '#ffffff',marginRight:'5px'}}></i>Search Doctor</Link> */}
         <Link to='/Contact'><i class="fa-solid fa-phone" style={{color: '#ffffff',marginRight:'5px'}}></i>Contact</Link>
-        <Link to='/InstituteAction'>Hospital</Link>
+        <Link to='/InstituteAction'><i class="fa-solid fa-hospital" style={{color: '#ffffff',marginRight:'5px'}}></i>Hospital</Link>
       </div>
     </header>
     <Routes>

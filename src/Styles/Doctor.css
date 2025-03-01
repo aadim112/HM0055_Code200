@@ -156,3 +156,28 @@
       padding: 0.75rem;
   }
 }
+@media (max-width : 600px) {
+  .doctor-profile{
+    width:  90%;
+    height: auto;
+  }
+  .doctor-panel{
+    display: flex;
+    flex-direction: column;
+  }
+  .doctor-tools{
+    margin-top: 20px;
+  }
+  .recentPatientContainer{
+    width: 100%;
+  }
+  .DoctorsPatient{
+    width: 120%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .DoctorsPatient div{
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,7 +1,6 @@
 import { useState, useEffect} from 'react';
-import '../App.css'
 import '../Styles/PatientHome.css'
-
+import '../App.css'
 import { useLocation } from 'react-router-dom'
 import db from '../firebase';
 import { get,ref, update } from 'firebase/database';
@@ -183,6 +182,13 @@ const PatientHome = () => {
         setAppointmentsToDisplay(appointmentDetail);
         console.log(appointmentDetail);
     }
+    const copyToClipboard = (text) => {
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                console.log(`Copied: ${text}`);
+            })
+            .catch(err => console.error('Error copying:', err));
+    };
     
 
   return (
@@ -195,7 +201,7 @@ const PatientHome = () => {
                 <div className='patient-info'>
                     <div style={{display:'flex',fontWeight:'bold',width:'auto',alignItems:'center',gap:'10px'}}>
                         <p>Id : {patient.patientid}</p>
-                        <i class="fa-solid fa-copy fa-lg"></i>
+                        <i class="fa-solid fa-copy fa-lg" style={{cursor:'pointer'}} onClick={() => copyToClipboard(patient.patientid)}></i>
                     </div>
                     <p>Name : {patient.firstname} {patient.lastname}</p>
                     <p>Contact : {patient.contact}</p>

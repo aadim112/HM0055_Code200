@@ -137,7 +137,7 @@ const DoctorHome = () => {
 
     return (
         <>
-            <h2 style={{ marginLeft: '20px' }}>Welcome</h2>
+            <h2 style={{ marginLeft: '20px' }}>Welcome {doctorDetail.firstname}</h2>
             <div className='doctor-panel'>
                 <div className='doctor-profile'>
                     <h2>Doctor Detail</h2>
