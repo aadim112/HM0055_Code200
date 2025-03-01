@@ -1,5 +1,5 @@
 .contact-banner {
-    background: linear-gradient(135deg, rgba(12, 46, 138, 0.356), rgba(80, 216, 216, 0.466)); /* Adjusted transparency */
+    background: linear-gradient(135deg,  rgb(237, 244, 244)); /* Adjusted transparency */
     padding: 60px 20px;
     text-align: center;
     color: white;
@@ -81,7 +81,7 @@
 }
 
 .contact-btn {
-    background-color: #0c2e8a;
+    background-color: #0ea5e9;
     color: white;
     padding: 15px 30px; /* Increased padding for more space */
     border: none;
