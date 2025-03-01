@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
+import '../Styles/Admin.css'
 import db from '../firebase';
 import { ref, get } from 'firebase/database';
 

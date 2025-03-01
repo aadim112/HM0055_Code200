@@ -1,0 +1,45 @@
+.admin{
+    width: 100%;
+    height: auto;
+    margin-top: 40px;
+  }
+  .patient-search p{
+    margin-top: 20px;
+    font-size: bold;
+  }
+  .medical-patient-search{
+    width: auto;
+    margin-left: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: auto;
+  }
+  .medical-patient-search input{
+    height: 20px;
+    width: 250px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0px;
+  }
+  .medical-patient-search button{
+    height: 35px;
+    width: 100px;
+    border: 0px;
+    border-radius: 5px;
+    font-family: poppins;
+    background-color: #03045e;
+    color: white;
+    cursor: pointer;
+  }
+  .medical-data{
+    width: 900px;
+    height: auto;
+    margin-left: 20px;
+  }
+  .Add-medicine{
+    width: 800px;
+    height: 40px;
+    background-color: #03045e;
+    margin-left: 20px;
+  }
