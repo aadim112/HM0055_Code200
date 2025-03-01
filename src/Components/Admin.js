@@ -123,6 +123,7 @@ const Admin = () => {
     return (
         <>
             <div className="admin">
+            <h2 style={{color: '#0ea5e9', fontSize: '1.75rem',marginLeft:'20px',paddingTop:'20px'}}>Issue Medicine</h2>
                 <div className="medical-patient-search">
                     <p>Appointment Number</p>
                     <input

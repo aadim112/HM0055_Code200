@@ -180,7 +180,7 @@ const Account = () => {
                     //creating sessions
                     localStorage.setItem("userEmail", patientemail);
                     localStorage.setItem("userType", 'patient');
-                    navigate('/PatientPanel', { state: { patientemail } });
+                    navigate('/Account');
                     setProcessing(false);
                 }
 

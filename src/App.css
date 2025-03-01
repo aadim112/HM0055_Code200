@@ -104,8 +104,3 @@ DoctorHome.css
 .search-list:hover{
   background-color: rgb(179, 179, 179);
 }
-.DoctorsPatient{
-  width: 500px;
-  height: 50px;
-  background-color: black;
-}

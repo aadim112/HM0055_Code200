@@ -18,6 +18,7 @@ const Administrator = () => {
         sellPrice: ''
     });
 
+    console.log(localStorage.getItem('inscode'));
     // Function to handle medicine type selection and set unit type
     const checkType = (event) => {
         const selectedType = event.target.value;
@@ -77,6 +78,7 @@ const Administrator = () => {
         }
 
         medicines.forEach((medicine) => {
+            const inscode = localStorage.getItem('inscode');
             const medicineRef = ref(db, `medicine/${medicine.name}`); // Store under medicine/{medicineName}
             
             set(medicineRef, medicine)
@@ -120,7 +122,7 @@ const Administrator = () => {
                 </div>
 
                 <button className="Add-entry" onClick={() => setDisplay(true)}>Add Medicine Entry</button>
-                <button className="Add-entry" style={{ marginLeft: '10px' }} onClick={uploadToFirebase}>Upload</button>
+                <button className="Add-entry" style={{ marginLeft: '10px' }} onClick={uploadToFirebase}>Update</button>
             </div>
 
             {display && (

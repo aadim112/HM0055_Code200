@@ -3,6 +3,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { ref, get, onValue } from "firebase/database";
 import db, { auth } from "../firebase";
 import "../Styles/institution.css";
+import Admin from "./Admin";
+import Administrator from "./Administrator";
 
 const Institute = () => {
   const location = useLocation();
@@ -162,6 +164,12 @@ const Institute = () => {
           )}
         </div>
       </div>
+      <div className="Institutuion-actions">
+      </div>
+      <div style={{paddingBottom:'20px'}}>
+            <Admin/>
+            <Administrator/>
+        </div>
     </div>
   );
 };

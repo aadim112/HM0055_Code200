@@ -74,6 +74,7 @@ const HospitalHome = () => {
                 foundHospitalCode 
               } 
             });
+            localStorage.setItem('inscode',foundHospitalCode);
           } else {
             setError("Hospital account not found.");
           }
