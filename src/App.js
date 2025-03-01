@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import './Styles/Doctor.css'
 import { HashRouter,Router,Route,Link, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import DoctorHome from './Components/DoctorHome'
 import Account from './Components/Account';
 import Admin from './Components/Admin';
+import Administrator from './Components/Administrator';
 
 function App() {
   return (
@@ -22,6 +22,7 @@ function App() {
         <Link to='/Account'><i class="fa-solid fa-calendar-check" style={{color: '#ffffff',marginRight:'5px'}}></i>Search Doctor</Link>
         <Link to='/Account'><i class="fa-solid fa-phone" style={{color: '#ffffff',marginRight:'5px'}}></i>Contact</Link>
         <Link to='/Admin'><i class="fa-solid fa-user-tie" style={{color: '#ffffff',marginRight:'5px'}}></i>Admin</Link>
+        <Link to='/Administrator'>Administrator</Link>
       </div>
     </header>
     <Routes>
@@ -29,6 +30,7 @@ function App() {
       <Route path='/' element={<Home/>}></Route>
       <Route path='/DoctorPanel' element={<DoctorHome/>}></Route>
       <Route path='/Admin' element={<Admin/>}></Route>
+      <Route path='/Administrator' element={<Administrator/>}></Route>
       {/* <Route path='/PatientPanel' element={<PatientHome/>}></Route> */}
       {/* <Route path='/bookappointment' element={<AppointmentPage/>}></Route> */}
       {/* <Route path='/SearchDoctorPage' element={<SearchDoctorPage/>}></Route> */}
