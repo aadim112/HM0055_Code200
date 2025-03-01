@@ -4,8 +4,8 @@ import './Styles/Home.css'
 import './Styles/Account.css'
 import './Styles/Doctor.css'
 import { HashRouter,Router,Route,Link, Routes } from 'react-router-dom';
-
 import Home from './Components/Home';
+import DoctorHome from './Components/DoctorHome'
 import Account from './Components/Account';
 import DoctorHome from './Components/DoctorHome';
 
