@@ -1,26 +1,27 @@
 import { useState } from 'react';
 import '../App.css'
 import '../Styles/Account.css'
-import { set,ref } from 'firebase/database';
+import { set, ref, get, update } from 'firebase/database';
 import db from '../firebase';
-import { auth, createUserWithEmailAndPassword,signInWithEmailAndPassword,setDoc,doc} from '../firebase';
+import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, setDoc, doc } from '../firebase';
 import { Navigate, useNavigate } from 'react-router-dom';
 const Account = () => {
-    const navigate  = useNavigate();
+    const navigate = useNavigate();
     const [login, setLogin] = useState(true);
-    const [patlogin,setPatLogin] = useState(true);
-    const [diseaselist,setDiseaseList] = useState([]);
-    const [processing,setProcessing] = useState(false);
-    const [warning,setWarning] = useState('');
+    const [patlogin, setPatLogin] = useState(true);
+    const [diseaselist, setDiseaseList] = useState([]);
+    const [processing, setProcessing] = useState(false);
+    const [warning, setWarning] = useState('');
     const [formData, setFormData] = useState({
         email: '',
-        contact:'',
+        contact: '',
         password: '',
         firstname: '',
         lastname: '',
         confirmPassword: '',
-        specialisation:'',
+        specialisation: '',
         degree: '',
+        hospitalId: '', // Added hospital ID field
     });
 
     const setAccount = (e) => {
@@ -71,7 +72,7 @@ const Account = () => {
                 //creating sessions
                 localStorage.setItem("userEmail", email);
                 localStorage.setItem("userType", userType);
-                console.log("local: ",localStorage.getItem('userType'))
+                console.log("local: ", localStorage.getItem('userType'))
                 if(patlogin){
                     navigate('/DoctorPanel', { state: { email } });
                     alert("Login Doctor Successful!");
@@ -83,6 +84,7 @@ const Account = () => {
                 }
             } catch (error) {
                 setWarning(error.message);
+                setProcessing(false);
             }
         } else {
             setProcessing(true);
@@ -92,51 +94,87 @@ const Account = () => {
                 setProcessing(false);
                 return;
             }
-            // Register user in Firebase Authentication
+            try {
+                // Register user in Firebase Authentication
                 const userCredential = await createUserWithEmailAndPassword(auth, formData.email, formData.password);
                 const userId = userCredential.user.uid; // Firebase Auth User ID
-            try {
+                
                 if(patlogin){
+                    // Validate hospitalId for doctor registration
+                    if (!formData.hospitalId || formData.hospitalId.trim() === '') {
+                        setWarning("Hospital ID is required for doctor registration");
+                        setProcessing(false);
+                        return;
+                    }
+                    
                     // Generate a 10-digit unique doctor ID
-                const doctorId = generateUniqueId();
-                const fileName = `${doctorId}.json`;
+                    const doctorId = generateUniqueId();
+                    const fileName = `${doctorId}.json`;
 
-                const doctor = {
-                    firstname : formData.firstname,
-                    lastname : formData.lastname,
-                    email : formData.email,
-                    contact : formData.contact,
-                    specialisation : formData.specialisation,
-                    fileName : fileName,
-                    doctorid : doctorId,
-                    RecentPatients : [],
-                    Ratting : [0,0],
-                }
+                    const doctor = {
+                        firstname: formData.firstname,
+                        lastname: formData.lastname,
+                        email: formData.email,
+                        contact: formData.contact,
+                        specialisation: formData.specialisation,
+                        fileName: fileName,
+                        doctorid: doctorId,
+                        hospitalId: formData.hospitalId, // Save hospital ID with doctor data
+                        RecentPatients: [],
+                        Ratting: [0,0],
+                    }
 
-                await set(ref(db,`doctor/${doctorId}`),doctor);
-                const email = doctor.email;
+                    // Save doctor data
+                    await set(ref(db, `doctor/${doctorId}`), doctor);
+                    
+                    // Add doctor to hospital's doctors list as array element
+                    // First, check if the Hospital/hospitalId/Doctor path exists
+                    const hospitalRef = ref(db, `Hospital/${formData.hospitalId}`);
+                    const hospitalSnapshot = await get(hospitalRef);
+                    
+                    if (hospitalSnapshot.exists()) {
+                        // Get the existing Hospital data
+                        const hospitalData = hospitalSnapshot.val();
+                        
+                        // Check if Doctor array already exists
+                        if (hospitalData.Doctor && Array.isArray(hospitalData.Doctor)) {
+                            // Add the new doctor ID to the existing array
+                            const updatedDoctors = [...hospitalData.Doctor, doctorId];
+                            await update(hospitalRef, { Doctor: updatedDoctors });
+                        } else {
+                            // Create new Doctor array with the doctor ID
+                            await update(hospitalRef, { Doctor: [doctorId] });
+                        }
+                    } else {
+                        // If hospital doesn't exist, create it with the Doctor array
+                        await set(hospitalRef, {
+                            Doctor: [doctorId],
+                            // You can add other hospital fields here if needed
+                        });
+                    }
+                    
+                    const email = doctor.email;
 
-                //creating sessions
-                localStorage.setItem("userEmail", email);
-                localStorage.setItem("userType", 'doctor');
-                // document.getElementById('rsubmit').reset();
-                navigate('/DoctorPanel', { state: { email } });
-                setProcessing(false);
-                }else{
+                    //creating sessions
+                    localStorage.setItem("userEmail", email);
+                    localStorage.setItem("userType", 'doctor');
+                    navigate('/DoctorPanel', { state: { email } });
+                    setProcessing(false);
+                } else {
                     const patientid = generateUniqueId();
                     const patient = {
-                        firstname : formData.firstname,
-                        lastname : formData.lastname,
-                        email : formData.email,
-                        contact : formData.contact,
-                        disease : diseaselist,
-                        appointments : [],
-                        InsuranceInfo : {},
-                        DoctorsAppointed : [],
-                        patientid : patientid,
+                        firstname: formData.firstname,
+                        lastname: formData.lastname,
+                        email: formData.email,
+                        contact: formData.contact,
+                        disease: diseaselist,
+                        appointments: [],
+                        InsuranceInfo: {},
+                        DoctorsAppointed: [],
+                        patientid: patientid,
                         NextAppointment: [],
                     }
-                    await set(ref(db,`patient/${patientid}`),patient);
+                    await set(ref(db, `patient/${patientid}`), patient);
                     const patientemail = patient.email;
 
                     //creating sessions
@@ -148,6 +186,7 @@ const Account = () => {
 
             } catch (error) {
                 setWarning(error.message);
+                setProcessing(false);
             }
         }
     };
@@ -208,6 +247,11 @@ const Account = () => {
                                 <div className='input-container'>
                                     <label>Confirm Password*</label>
                                     <input type='text' placeholder='Confirm Password' name='confirmPassword' onChange={handleChange}  required/>
+                                </div>
+
+                                <div className='input-container'>
+                                    <label>Hospital ID*</label>
+                                    <input type='text' placeholder='Hospital ID' name='hospitalId' onChange={handleChange} required/>
                                 </div>
 
                                 <div className='input-container'>
@@ -342,17 +386,17 @@ const Account = () => {
                                     <option>Gonorrhea</option>
                                     <option>Chlamydia</option>
                                     <option>Ulcerative Colitis</option>
-                                    <option>Crohn’s Disease</option>
+                                    <option>Crohn's Disease</option>
                                     <option>Celiac Disease</option>
                                     <option>Hemophilia</option>
                                     <option>Thalassemia</option>
-                                    <option>Huntington’s Disease</option>
+                                    <option>Huntington's Disease</option>
                                     <option>Duchenne Muscular Dystrophy</option>
                                     <option>Marfan Syndrome</option>
                                     <option>Rheumatic Fever</option>
                                     <option>Whooping Cough</option>
                                     <option>Scarlet Fever</option>
-                                    <option>Hansen’s Disease</option>
+                                    <option>Hansen's Disease</option>
                                     </select>
                                     <button onClick={addDisease}>Add</button>
                                 </div>
