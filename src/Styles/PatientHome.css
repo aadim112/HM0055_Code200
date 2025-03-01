@@ -1,0 +1,266 @@
+.patient-panel{
+    width: 100%;
+    height: auto;
+    padding-bottom: 20px;
+  }
+  .patient-panel h2{
+    margin-left: 30px;
+  }
+  .patient-container{
+    width: 90%;
+    height: auto;
+    display: flex;
+    margin-left: 30px;
+    margin-top: 20px;
+  }
+  .patient-info{
+    width: 100%;
+    height: 140px;
+    background-color: #a6a7f2;
+    border-radius: 9px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto;
+  }
+  .patient-info p{
+    margin-left: 20px;
+    font-size: 17px;
+  }
+  .diseases{
+    display: flex;
+    font-weight: bold;
+  }
+  .patient-app{
+    width: 100%;
+    height: auto;
+  }
+  .sorting-container{
+    width: 100%;
+    height: 30px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .sorting-bar{
+    width: 80%;
+    height: 40px;
+    border-radius: 7px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .sorting-bar button{
+    border: 0px;
+    height: 35px;
+    background-color: transparent;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: poppins;
+    font-size: 15px;
+  }
+  .appointment-container{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .appointments{
+    width: 80%;
+    height: 40px;
+    background-color: #f1faee;
+    border-radius: 7px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .appointments p{
+    margin-left: 20px;
+  }
+  .add-appointment-containner{
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .add-app{
+    width: auto;
+    height: 50px;
+    background-color: #03045e;
+    border-radius:7px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    gap: 20px;
+  }
+  .upcomming-appointments{
+    width: 100%;
+    height: 30px;
+  }
+  .add-patient{
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+    background-color: #03045e;
+    color: white;
+    border-radius: 7px;
+    cursor: pointer;
+  }
+  .notification-container{
+    width: 400px;
+    height: 50px;
+    background-color: #cbffba;
+    position: absolute;
+    right: 0;
+    margin-right: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    z-index: 5;
+  }
+  .notification-container p{
+    margin-left: 30px;
+  }
+  .appointment-form-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.436);
+  }
+  .appointment-form-div{
+    width: 80%;
+    height: 550px;
+    margin-top: 40px;
+    background-color: white;
+    border-radius: 9px;
+    padding-bottom: 20px;
+  }
+  .appointment-form-div p{
+    margin-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .doctor-details{
+    width: 80%;
+    height: auto;
+  }
+  .doctor-details p{
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .appointment-form{
+    margin-left: 20px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .appointment-form select{
+    width: 250px;
+    height: 30px;
+    font-family: poppins;
+    border-radius: 5px;
+  }
+  .reports-label{
+    width: 250px;
+    height: 30px;
+    border: 1px dashed black;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    border-radius: 5px;
+    padding-left: 10px;
+    cursor: pointer;
+  }
+  .appointment-form input[type='file']{
+    display: none;
+  }
+  
+  .appointment-form input[type = 'text']{
+    width: 350px;
+    height: 30px;
+    font-family: poppins;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+  }
+  .appointment-form input[type = 'text']:focus{
+    outline: none;
+  }
+  .appointment-form button{
+    width: 200px;
+    height: 40px;
+    font-family: poppins;
+    border-radius: 5px;
+    border: 0px;
+    background-color: #03045e;
+    color: white;
+    cursor: pointer;
+  }
+  .Appointment-Display{
+    width: 100%;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.263);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  .appointment-display-container{
+    width: 900px;
+    height: auto;
+    background-color: white;
+    border-radius: 9px;
+    margin-top: 30px;
+  }
+  .appointment-display-container button {
+    margin-left: 20px;
+    margin-top: 10px;
+    background-color: #03045e;
+    border: 0px;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  .Detail{
+    margin-left: 20px;
+    margin-top: 20px;
+    height: auto;
+  }
+  .filesDisplay{
+    margin-left: 20px;
+    font-weight: bold;
+  }
+  .filesDisplay iframe{
+    border: 0px;
+    width: 100%;
+  }
+  .DoctorsPatient{
+    width: 500px;
+    height: 50px;
+    background-color: black;
+  }

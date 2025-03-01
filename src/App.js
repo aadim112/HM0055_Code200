@@ -7,6 +7,8 @@ import Admin from './Components/Admin';
 import DoctorHome from './Components/DoctorHome'
 import AppointmentPage from './Components/AppointmentPage';
 import Administrator from './Components/Administrator';
+import PatientHome from './Components/PatientHome';
+import Notification from './Components/Notification';
 
 function App() {
   return (
@@ -31,7 +33,7 @@ function App() {
       <Route path='/' element={<Home/>}></Route>
       <Route path='/DoctorPanel' element={<DoctorHome/>}></Route>
       <Route path='/Admin' element={<Admin/>}></Route>
-      {/* <Route path='/PatientPanel' element={<PatientHome/>}></Route> */}
+      <Route path='/PatientPanel' element={<PatientHome/>}></Route>
       <Route path='/bookappointment' element={<AppointmentPage/>}></Route>
       {/* <Route path='/SearchDoctorPage' element={<SearchDoctorPage/>}></Route> */}
       <Route path='/Administator' element={<Administrator/>}></Route>
