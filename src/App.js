@@ -6,7 +6,6 @@ import Account from './Components/Account';
 import Admin from './Components/Admin';
 import DoctorHome from './Components/DoctorHome'
 import AppointmentPage from './Components/Administrator';
-import Administrator from './Components/Administrator';
 
 function App() {
   return (
