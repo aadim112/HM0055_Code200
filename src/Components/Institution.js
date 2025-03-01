@@ -4,6 +4,7 @@ import { ref, get, onValue } from "firebase/database";
 import db, { auth } from "../firebase";
 import "../Styles/institution.css";
 import Admin from "./Admin";
+import '../App.css'
 import Administrator from "./Administrator";
 
 const Institute = () => {

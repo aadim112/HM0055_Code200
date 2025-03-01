@@ -2,6 +2,7 @@ import { useState } from 'react';
 import db from '../firebase';
 import { ref, set } from 'firebase/database';
 import '../Styles/Administator.css';
+import '../App.css';
 
 const Administrator = () => {
     const [unitType, setUnitType] = useState('quantity');

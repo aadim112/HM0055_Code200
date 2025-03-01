@@ -1,5 +1,6 @@
 import '../Styles/Home.css';
 import { motion } from 'framer-motion';
+import '../App.css';
 
 const Home = () => {
   return (
@@ -10,7 +11,6 @@ const Home = () => {
             initial={{ opacity: 0, y: -20 }} 
             animate={{ opacity: 1, y: 0 }} 
             transition={{ duration: 0.5 }}
-            style={{ fontWeight: 'bold', fontSize: '32px', color: '#0c2e8a' }}
           >
             WELCOME TO MEDILOG
           </motion.h1>
@@ -18,9 +18,7 @@ const Home = () => {
           <motion.p 
             initial={{ opacity: 0, x: -20 }} 
             animate={{ opacity: 1, x: 0 }} 
-            transition={{ delay: 0.3, duration: 0.5 }}
-            style={{ fontSize: '18px', color: '#555', marginBottom: '20px' }}
-          >
+            transition={{ delay: 0.3, duration: 0.5 }}>
             A seamless and efficient platform for managing medical data, ensuring accuracy, security, and easy access.
           </motion.p>
 
@@ -31,7 +29,7 @@ const Home = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.5, duration: 0.5 }}
             >
-              <h2>Why Choose MediLog?</h2>
+              <h2>Why Choose MEDILOG?</h2>
               <p>MediLog simplifies medical data management, enhances patient record-keeping, and ensures real-time access to critical information.</p>
               <button className="learn-more-btn">Learn More</button>
             </motion.div>

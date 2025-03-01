@@ -163,7 +163,6 @@ const Admin = () => {
                     />
                     <button 
                         onClick={handleAddMedicine} 
-                        style={{marginLeft:'20px'}}
                         disabled={!appointmentData}
                     >
                         Add
