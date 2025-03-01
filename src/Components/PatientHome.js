@@ -187,6 +187,7 @@ const PatientHome = () => {
 
   return (
     <>
+        <Notification showToast={showToast} message={'Patient Added'}/>
         <div className='patient-panel'>
             <h2>Welcome {!userType && patient.firstname}</h2>
             {userType && <div className='add-patient' id='add-patient' onClick={AddPatientToDoctor}>Add Patient</div>}
@@ -211,6 +212,7 @@ const PatientHome = () => {
                     </div>
                 </div>
             </div>
+            
             <div className='patient-app'>
                 <div className='sorting-container'>
                     <div className='sorting-bar'>
@@ -320,7 +322,7 @@ const PatientHome = () => {
                     </div>
                 </div>
             </div>
-        <Notification showToast={showToast} message={'Patient Added'}/>
+        
     </>
   )
 }
