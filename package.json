@@ -1,5 +1,5 @@
 {
-  "name": "medicare",
+  "name": "easydoctor",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,11 +7,20 @@
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.7.9",
+    "bootstrap": "^5.3.3",
+    "cloudinary": "^2.5.1",
+    "firebase": "^11.3.1",
+    "firebase-admin": "^13.1.0",
     "framer-motion": "^12.4.7",
+    "fs": "^0.0.1-security",
+    "googleapis": "^144.0.0",
+    "multer": "^1.4.5-lts.1",
     "react": "^19.0.0",
+    "react-bootstrap": "^2.10.9",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.2.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
