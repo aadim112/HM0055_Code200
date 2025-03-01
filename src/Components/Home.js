@@ -1,4 +1,4 @@
-import '../App.css';
+import '../Styles/Home.css';
 import { motion } from 'framer-motion';
 
 const Home = () => {
