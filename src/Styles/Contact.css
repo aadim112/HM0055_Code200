@@ -1,0 +1,167 @@
+.contact-banner {
+    background: linear-gradient(135deg, rgba(12, 46, 138, 0.356), rgba(80, 216, 216, 0.466)); /* Adjusted transparency */
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.contact-information-div {
+    max-width: 800px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.95); /* Slightly more opaque for better readability */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the content */
+}
+
+.contact-heading {
+    font-weight: bold;
+    font-size: 36px;
+    color: #0c2e8a;
+    margin-bottom: 20px;
+}
+
+.contact-description {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Contact Form */
+.contact-form-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    width: 80%; /* Increased width */
+    min-width: 350px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+.contact-form-container {
+    background: #e6efff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: left;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #0c2e8a;
+    outline: none;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.contact-btn {
+    background-color: #0c2e8a;
+    color: white;
+    padding: 15px 30px; /* Increased padding for more space */
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 50%; /* Increased button width */
+    margin: 20px 0; /* Added space above and below the button */
+}
+
+.contact-btn:hover {
+    background-color: #50d8d7;
+    transform: translateY(-2px);
+}
+
+.success-message {
+    color: green;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* Contact Details */
+.contact-details-container {
+    display: flex;
+    justify-content: space-around; /* Distribute space evenly */
+    align-items: center;
+    gap: 20px; /* Space between items */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    margin-top: 30px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    text-align: center;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    color: #333;
+    padding: 20px;
+    background: #f0f8ff;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex: 1; /* Allow items to grow and take equal space */
+    min-width: 200px; /* Minimum width for each item */
+}
+
+.contact-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.contact-details .icon {
+    font-size: 24px;
+    color: #0c2e8a;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form-card {
+        width: 90%;
+    }
+
+    .contact-details-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 15px;
+        width: 90%;
+    }
+
+    .contact-details {
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    .contact-btn {
+        width: 70%; /* Adjusted button width for mobile */
+    }
+}
