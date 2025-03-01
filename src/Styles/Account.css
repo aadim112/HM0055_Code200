@@ -1,13 +1,38 @@
 /* Account Container */
+/* Full Page Background */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url('../Assets/account-bg.jpg') no-repeat center center/cover;
+  background-attachment: fixed; /* Ensures the image stays fixed when scrolling */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Account Container */
 .account-container {
   max-width: 1000px;
   margin: 2rem auto;
-  background-color: #f8fafc;
+  background: rgba(255, 255, 255, 0.9); /* Adds a semi-transparent white background */
   border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+
+/* Optional: Add a semi-transparent overlay for better text visibility
+.account-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust the transparency as needed */
+  /* border-radius: 10px;
+  z-index: -1;
+} */ 
+
 
 /* Account Type Selector */
 .chose-type {
@@ -26,7 +51,7 @@
 }
 
 .chose-type a {
-  color: #6366f1;
+  color: #0ea5e9;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.2s;
