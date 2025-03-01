@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import '../App.css'
+import '../Styles/Account.css'
 import { set,ref } from 'firebase/database';
 import db from '../firebase';
 import { auth, createUserWithEmailAndPassword,signInWithEmailAndPassword,setDoc,doc} from '../firebase';

@@ -23,3 +23,89 @@ header{
   color: white;
   text-decoration: none;
 }
+
+/*
+DoctorHome.css
+*/
+.doctor-panel{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+}
+.doctor-profile{
+  width: 30%;
+  height: 500px;
+  background-color: #03045e;
+  margin-left: 20px;
+  border-radius: 9px;
+  color: white;
+}
+.doctor-profile h2{
+  margin-left:20px;
+}
+.doctor-profile p{
+  margin-left: 20px;
+}
+.doctor-tools{
+  width: 70%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+.patient-search{
+  width: 80%;
+  height: auto;
+}
+.patient-search p{
+  margin-top: 0px;
+  font-size: 20px;
+}
+.search-bar{
+  width: 100%;
+  height: 40px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+}
+.search-bar input{
+  width: 350px;
+  border-radius: 6px;
+  border: 1px solid black;
+  padding: 10px;
+  font-family: Open Sans;
+  font-family: poppins;
+}
+.search-bar input:focus{
+  outline: none;
+}
+.search-bar button{
+  border: 0px;
+  border-radius: 7px;
+  margin-left: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  cursor: pointer;
+}
+.search-list{
+  width: 350px;
+  padding: 10px;
+  height: 30px;
+  background-color: whitesmoke;
+  margin-top: 5px;
+  border-radius: 4px;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+}
+.search-list:hover{
+  background-color: rgb(179, 179, 179);
+}
+.DoctorsPatient{
+  width: 500px;
+  height: 50px;
+  background-color: black;
+}

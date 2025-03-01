@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import './Styles/Doctor.css'
 import { HashRouter,Router,Route,Link, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import DoctorHome from './Components/DoctorHome'
