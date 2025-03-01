@@ -5,7 +5,8 @@ import Home from './Components/Home';
 import Account from './Components/Account';
 import Admin from './Components/Admin';
 import DoctorHome from './Components/DoctorHome'
-import AppointmentPage from './Components/Administrator';
+import AppointmentPage from './Components/AppointmentPage';
+import Administrator from './Components/Administrator';
 
 function App() {
   return (
