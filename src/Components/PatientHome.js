@@ -319,6 +319,27 @@ const PatientHome = () => {
                         {/* <img src={appointmentToDisplay.file}></img> */}
                         <iframe src={appointmentToDisplay.file} title={appointmentToDisplay.file} width="100%" height="600px"></iframe>
                     </div>
+                    <div className='prescription'>
+                        <p>Prescriptions</p>
+                        {appointmentToDisplay.medicines && Object.keys(appointmentToDisplay.medicines).length > 0 ? (
+                            <div className='medicines-list'>
+                                {Object.entries(appointmentToDisplay.medicines).map(([medicineName, details], index) => (
+                                    <div key={index} className='medicine-item'>
+                                        <p><strong>{medicineName}</strong></p>
+                                        <ul>
+                                            {Object.entries(details).map(([key, value], idx) => (
+                                                <li key={idx}>
+                                                    <span className='medicine-key'>{key}:</span> <span>{value}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <p>No prescriptions available</p>
+                        )}
+                    </div>
                 </div>
             </div>
         
