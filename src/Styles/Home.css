@@ -1,0 +1,89 @@
+.nav-div{
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    margin-right: 20px;
+    justify-content: center;
+  }
+  .nav-div a{
+    color: rgb(15, 15, 15);
+    text-decoration: none;
+  }
+.logo-div{
+    width: auto ;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 30px;
+  }
+  .logo-div img{
+    width: 50px;
+    height: 50px;
+  }
+  .logo-div h1{
+    margin-left: 10px;
+    font-size: 20px;
+  }
+.hero-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Assets/home-bg.jpg');
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+  }
+.hero-information-div {
+    max-width: 800px;
+    text-align: center;
+  }
+  
+  .features-container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevents wrapping to the next row */
+    gap: 10px; /* Adds space between cards */
+    justify-content: center; /* Centers cards in the row */
+    align-items: stretch; /* Ensures uniform height */
+  }
+  
+  .feature-box {
+    flex: 1; /* Ensures equal width for all cards */
+    min-width: 250px; /* Prevents too small cards */
+    max-width: 300px; /* Prevents stretching too much */
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    text-align: center;
+  }
+  
+  .blue-box {
+    background-color: #0c2e8a;
+    color: white;
+  }
+  
+  /* Responsive fix */
+  @media (max-width: 1000px) {
+    .features-container {
+      flex-wrap: wrap; /* Allows wrapping on smaller screens */
+      justify-content: center;
+    }
+  }
+  
+  .learn-more-btn {
+    background: white;
+    color: #0c2e8a;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .icon {
+    font-size: 30px;
+    color: #0c2e8a;
+  }
+  
