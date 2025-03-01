@@ -47,6 +47,10 @@
     text-align: center;
     backdrop-filter: blur(8px);
   }
+  .feature-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+}
   
   .blue-box {
     background-color: #0c2e8a;
