@@ -214,13 +214,6 @@ const PatientHome = () => {
             </div>
             
             <div className='patient-app'>
-                <div className='sorting-container'>
-                    <div className='sorting-bar'>
-                        <p>Sort appointments based on : </p>
-                        <button>Disease</button>
-                        <button>Doctor</button>
-                    </div>
-                </div>
                 {!userType &&
                 <>
                     <p style={{marginLeft:'30px',fontWeight:'bold',fontSize:'20px'}}>Upcomming Appointment's</p>
