@@ -1,71 +1,70 @@
-# Getting Started with Create React App
+# **MediConnect - Doctor and Patient Management System**  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## **📌 Purpose of the Website**  
+MEDILOG is a web-based platform designed to streamline the interaction between doctors and patients by offering an efficient appointment booking system, patient records management, and a user-friendly interface.  
 
-## Available Scripts
+### **How It Works?**  
+- Patients can register and log in to book appointments with their preferred doctors.  
+- Doctors can access patient history and manage appointments.  
+- The platform securely stores medical records and prescriptions for easy access.  
 
-In the project directory, you can run:
+### **How It Helps the Institute?**  
+- Reduces paperwork by digitizing patient records.  
+- Enhances the efficiency of scheduling appointments.  
+- Improves doctor-patient interaction by providing a centralized medical record system.  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## **🌟 Features**  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+✔ **Appointment Booking** - Patients can book appointments online based on doctor availability.  
+✔ **Search Patient Records** - Doctors can search and access patient history easily.  
+✔ **User-Friendly Design** - Simple and intuitive UI for seamless navigation.  
+✔ **Responsive Design** - Fully optimized for mobile, tablet, and desktop users.  
+✔ **Secure Data Management** - Patient information is stored securely using Firebase.  
+✔ **Medicine Management** - Doctors can prescribe medicines, and inventory updates in real-time.  
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **🛠️ Tech Stack & APIs Used**  
 
-### `npm run build`
+- **Frontend:** React.js  
+- **Backend:** Node.js  
+- **Database:** Firebase Realtime Database  
+- **Storage:** Google Drive API (for storing reports and documents)  
+- **Authentication:** Firebase Phone Authentication  
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## **🚀 Upcoming Features**  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+🔹 **Video Consultation:** Patients can consult doctors via video calls.  
+🔹 **E-Prescription System:** Digital prescriptions generated and stored.  
+🔹 **Health Reports & Analytics:** AI-based health insights for patients.  
+🔹 **Multi-Language Support:** Expand accessibility for non-English speakers.  
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## **📖 How to Fork/Clone the Project?**  
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. **Fork the Repository** - Click the "Fork" button on GitHub.  
+2. **Clone the Repository**  
+   ```bash
+   git clone https://github.com/your-username/MediConnect.git
+   cd MediConnect
+  ## **📩 Contact Us**  
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+If you have any questions, feedback, or issues, feel free to reach out to us.  
+### **👨‍💻 Our Team**  
+- **Aditya Patil**  
+  - 📧 [aaditya.patil.m@gmail.com](mailto:aaditya.patil.m@gmail.com)  
+  - 🔗 [GitHub](https://github.com/aadim112)  
 
-## Learn More
+- **Yash Rajbhoj**  
+  - 📧 [yashrajbhoj2331@gmail.com](mailto:yashrajbhoj2331@gmail.com)  
+  - 🔗 [GitHub](https://github.com/Yash-Rajbhoj2001)  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# HM0055_Code200
+- **Rahul Singh**  
+  - 📧 [9905singhrahul@gmail.com](mailto:9905singhrahul@gmail.com)  
+  - 🔗 [GitHub](https://github.com/868Rahul)  
