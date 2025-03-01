@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./Styles/AppointmentPage.css"; // Import CSS for styling
 
 const AppointmentPage = () => {
   const [selectedDate, setSelectedDate] = useState("");
