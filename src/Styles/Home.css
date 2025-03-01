@@ -41,7 +41,7 @@
 
 .hero-information-div > p {
   font-size: 1.2rem;
-  color: #5d6d7e;
+  color: #2c3e50;
   max-width: 800px;
   margin: 0 auto 3rem;
   text-align: center;
@@ -72,7 +72,7 @@
 }
 
 .blue-box {
-  background: linear-gradient(120deg, #3498db, #45acf0);
+  background: linear-gradient(322deg, #3498db00, #45acf0);
   color: white;
   grid-column: 1 / -1;
   margin-bottom: 1rem;
@@ -105,7 +105,7 @@
 }
 
 .feature-box p {
-  color: #5d6d7e;
+  color: #2c3e50;
   line-height: 1.6;
   margin-bottom: 0;
   flex-grow: 1;
