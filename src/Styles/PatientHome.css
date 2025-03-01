@@ -209,12 +209,10 @@
     outline: none;
   }
   .appointment-form button{
-    width: 200px;
-    height: 40px;
     font-family: poppins;
     border-radius: 5px;
     border: 0px;
-    background-color: #03045e;
+    background-color: #1e88e5;
     color: white;
     cursor: pointer;
   }
