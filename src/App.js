@@ -1,7 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import './Styles/Home.css'
-import './Styles/Account.css'
 import { HashRouter,Router,Route,Link, Routes } from 'react-router-dom';
 import Home from './Components/Home';
 import Account from './Components/Account';

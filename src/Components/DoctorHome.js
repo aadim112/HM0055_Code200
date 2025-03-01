@@ -1,5 +1,6 @@
 import '../App.css'
 import '../Styles/Doctor.css'
+import '../App.css'
 import { useLocation, useNavigate } from 'react-router-dom';
 import db from '../firebase';
 import { get,ref } from 'firebase/database';
