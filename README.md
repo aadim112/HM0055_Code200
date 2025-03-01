@@ -1,4 +1,4 @@
-# **MediConnect - Doctor and Patient Management System**  
+# **MEDILOG - Doctor and Patient Management System**  
 
 ## **📌 Purpose of the Website**  
 MEDILOG is a web-based platform designed to streamline the interaction between doctors and patients by offering an efficient appointment booking system, patient records management, and a user-friendly interface.  
