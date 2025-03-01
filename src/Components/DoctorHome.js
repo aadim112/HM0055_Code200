@@ -4,7 +4,6 @@ import '../App.css'
 import { useLocation, useNavigate } from 'react-router-dom';
 import db from '../firebase';
 import { get,ref } from 'firebase/database';
-import axios from "axios";
 import { use, useEffect, useState } from 'react';
 
 const DoctorHome = () => {
@@ -88,7 +87,7 @@ const DoctorHome = () => {
     
   return (
     <>
-    <h2 style={{marginLeft:'20px'}}>Well Come</h2>
+    <h2 style={{marginLeft:'20px'}}>WELCOME !</h2>
         <div className='doctor-panel'>
             <div className='doctor-profile'>
                 <h2>Doctor Detail</h2>
@@ -99,8 +98,8 @@ const DoctorHome = () => {
             </div>
             <div className='doctor-tools'>
                 <div className='patient-search'>
-                    <p>Search Patient</p>
-                    <p style={{color:'red',margin:'0px',fontSize:'12px'}}>{searchmessage}</p>
+                    <p>Search Patient Using ID</p>
+                    <p style={{color:'green',margin:'0px',fontSize:'12px'}}>{searchmessage}</p>
                     <div className='search-bar'>
                         <input type='number' placeholder='Search Here' name='patient-code'maxLength={10} onChange={handlePatientCode}></input>
                         <button onClick={searchPatient}>Search</button>
