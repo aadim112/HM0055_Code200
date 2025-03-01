@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: url('../Assets/account-bg.jpg') no-repeat center center/cover;
   background-attachment: fixed; /* Ensures the image stays fixed when scrolling */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
