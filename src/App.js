@@ -8,7 +8,6 @@ import Home from './Components/Home';
 import DoctorHome from './Components/DoctorHome'
 import Account from './Components/Account';
 import Admin from './Components/Admin';
-import DoctorHome from './Components/DoctorHome';
 
 function App() {
   return (
