@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import '../Styles/AppointmentPage.css';
+import db from "../firebase";
+import { set,get,ref } from "firebase/database";
 
 const AppointmentPage = () => {
   const [selectedDate, setSelectedDate] = useState("");
@@ -10,6 +12,38 @@ const AppointmentPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [doctors, setDoctors] = useState([]);
   const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchDoctors = async () => {
+      try {
+        setLoading(true);
+        const doctorsRef = ref(db, "doctor");
+        const snapshot = await get(doctorsRef);
+  
+        if (snapshot.exists()) {
+          const doctorData = snapshot.val();
+          console.log(doctorData)
+          const doctorArray = Object.keys(doctorData).map((key) => ({
+            id: key,  // Assuming the doctor ID is the key in Firebase
+            firstName: doctorData[key].firstname || "",
+            lastName: doctorData[key].lastname || "",
+            specialisation : doctorData[key].specialisation || ""
+          }));
+          console.log(doctorArray);
+  
+          setDoctors(doctorArray);
+        } else {
+          setDoctors([]);
+        }
+      } catch (error) {
+        console.error("Error fetching doctors:", error);
+        setDoctors([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchDoctors();
+  }, []);
 
   // Fetch doctors from Firebase
   useEffect(() => {
@@ -149,10 +183,9 @@ const AppointmentPage = () => {
                 </option>
                 {doctors.map((doctor) => (
                   <option key={doctor.id} value={doctor.id}>
-                    {doctor.name} ({doctor.specialty})
+                    {doctor.firstName} {doctor.lastName} | {doctor.specialisation}
                   </option>
                 ))}
-                <option>Dr Desuza</option>
               </select>
               {doctors.length === 0 && !loading && (
                 <p className="error-message">Unable to load doctors. Please try again later.</p>
