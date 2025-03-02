@@ -18,10 +18,10 @@
   }
   
   .hospital-auth-card h2 {
-    color: #2c3e50;
+    color: #0ea5e9;
     text-align: center;
     margin-bottom: 25px;
-    font-size: 24px;
+    font-size: 30px;
   }
   
   .form-group {
@@ -36,7 +36,7 @@
   }
   
   .form-group input {
-    width: 48%;
+    width: 94%;
     padding: 12px;
     border: 1px solid #cbd5e0;
     border-radius: 4px;
