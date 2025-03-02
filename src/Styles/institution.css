@@ -124,6 +124,7 @@
   }
   
   .doctor-card {
+    width: 80%;
     display: flex;
     background-color: #f7fafc;
     border-radius: 8px;

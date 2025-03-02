@@ -1,29 +1,45 @@
 /* Home.css */
-
 /* Hero section */
 .hero-banner {
+  position: relative;
   min-height: 100vh;
-  /* background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
-   */
-   background-image: url('../Assets/home-bg.jpg');
-   background-repeat: no-repeat;
-   background-size: contain;
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 2rem;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
+  overflow: hidden; /* Prevents potential overflow issues */
+}
+
+/* Blurred background using ::before */
+.hero-banner::before {
+  content: ""; /* Required for pseudo-elements */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../Assets/home-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure full coverage */
+  background-position: center;
+  filter: blur(2px);
+  z-index: -1; /* Push behind the content */
 }
 
 .hero-information-div {
+  position: relative;
   max-width: 1200px;
   width: 100%;
+  z-index: 1; /* Ensures content is above the blurred background */
 }
+
+
 
 .hero-information-div h1 {
   font-size: 3.5rem;
-  font-weight: 800;
-  color: #2c3e50;
+  font-weight: 800; 
+  color: #2c3e50c8;
   margin-bottom: 1.5rem;
   text-align: center;
   position: relative;

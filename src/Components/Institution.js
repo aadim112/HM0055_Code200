@@ -40,7 +40,7 @@ const Institute = () => {
         });
 
         // Get doctors associated with this hospital
-        const hospitalDoctorsRef = ref(db, `Hospital/${hospitalCode}/Doctors`);
+        const hospitalDoctorsRef = ref(db, `Hospital/${hospitalCode}/Doctor`);
         onValue(hospitalDoctorsRef, async (snapshot) => {
           if (snapshot.exists()) {
             const doctorIds = snapshot.val();
