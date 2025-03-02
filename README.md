@@ -65,7 +65,10 @@ Here are some screenshots showcasing the MEDILOG platform:
 - **Backend:** Firebase & Javascript 
 - **Database:** Firebase Realtime Database  
 - **Storage:** Cloudinary API (for storing reports and documents)  
-- **Authentication:** Firebase Phone Authentication  
+- **Authentication:** Firebase Phone Authentication
+---
+**Use Case Diagram**
+![Use Case](https://github.com/aadim112/HM0055_Code200/blob/main/src/Assets/usecase.png)
 
 ---
 
