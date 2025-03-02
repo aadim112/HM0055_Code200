@@ -1,3 +1,4 @@
+**[HM0055] [Code200]**  
 # **MEDILOG - Doctor and Patient Management System**  
 
 ## **📌 Purpose of the Website**  
@@ -26,12 +27,44 @@ MEDILOG is a web-based platform designed to streamline the interaction between d
 
 ---
 
+## **🖼️ Screenshots**  
+Here are some screenshots showcasing the MEDILOG platform:  
+
+**🔹 Home Dashboard**  
+![Hospital Dashboard](https://github.com/aadim112/HM0055_Code200/blob/main/src/Assets/Home.png)  
+
+**🔹 Appointment Dashboard**  
+
+![Appointment Dashboard](https://github.com/aadim112/HM0055_Code200/blob/main/src/Assets/appointment.png)  
+
+**🔹 Doctor Dashboard**  
+![Doctor Dashboard](https://github.com/aadim112/HM0055_Code200/blob/main/src/Assets/Doctor_dashboard.png)  
+
+**🔹 Patient Dashboard**  
+![Patient Dashboard](https://github.com/aadim112/HM0055_Code200/blob/main/src/Assets/patient.png)  
+
+**🔹 Inventory Management**  
+![Inventory Management](https://github.com/aadim112/HM0055_Code200/blob/main/src/Assets/Inventory.png)  
+
+
+---
+
+## **🌍 Deployed URL**  
+🔗 **[Access the Live Platform](https://aadim112.github.io/HM0055_Code200/)**  
+
+---
+
+## **🎥 Demo Video**  
+📽️ **[Watch the Demo](https://www.youtube.com/watch?v=S4eIyM2mN5Y)**  
+
+---
+
 ## **🛠️ Tech Stack & APIs Used**  
 
 - **Frontend:** React.js  
-- **Backend:** Node.js  
+- **Backend:** Firebase & Javascript 
 - **Database:** Firebase Realtime Database  
-- **Storage:** Google Drive API (for storing reports and documents)  
+- **Storage:** Cloudinary API (for storing reports and documents)  
 - **Authentication:** Firebase Phone Authentication  
 
 ---
@@ -43,7 +76,6 @@ MEDILOG is a web-based platform designed to streamline the interaction between d
 🔹 **Health Reports & Analytics:** AI-based health insights for patients.  
 🔹 **Multi-Language Support:** Expand accessibility for non-English speakers.  
 
-
 ---
 
 ## **📖 How to Fork/Clone the Project?**  
@@ -51,20 +83,27 @@ MEDILOG is a web-based platform designed to streamline the interaction between d
 1. **Fork the Repository** - Click the "Fork" button on GitHub.  
 2. **Clone the Repository**  
    ```bash
-   git clone https://github.com/your-username/MediConnect.git
-   cd MediConnect
-  ## **📩 Contact Us**  
+   git clone https://github.com/aadim112/HM0055_Code200.git
+📩 Contact Us
+If you have any questions, feedback, or issues, feel free to reach out to us.
 
-If you have any questions, feedback, or issues, feel free to reach out to us.  
-### **👨‍💻 Our Team**  
-- **Aditya Patil**  
-  - 📧 [aaditya.patil.m@gmail.com](mailto:aaditya.patil.m@gmail.com)  
-  - 🔗 [GitHub](https://github.com/aadim112)  
+👨‍💻 Our Team
+Aditya Patil
+📧 aaditya.patil.m@gmail.com
+🔗 *[GitHub](https://github.com/aadim112)*
 
-- **Yash Rajbhoj**  
-  - 📧 [yashrajbhoj2331@gmail.com](mailto:yashrajbhoj2331@gmail.com)  
-  - 🔗 [GitHub](https://github.com/Yash-Rajbhoj2001)  
+Yash Rajbhoj
+📧 yashrajbhoj2331@gmail.com
+🔗 *[GitHub](https://github.com/Yash-Rajbhoj2001)*
 
-- **Rahul Singh**  
-  - 📧 [9905singhrahul@gmail.com](mailto:9905singhrahul@gmail.com)  
-  - 🔗 [GitHub](https://github.com/868Rahul)  
+Rahul Singh
+📧 9905singhrahul@gmail.com
+🔗 *[GitHub](https://github.com/868Rahul)*
+
+## **📜 License**  
+This project is licensed under the **MIT License**.  
+
+
+
+🚀 Thank You for Using MEDILOG!
+We hope this project enhances hospital efficiency and improves patient care. 💙
