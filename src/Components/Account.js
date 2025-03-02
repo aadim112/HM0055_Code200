@@ -5,6 +5,7 @@ import { set, ref, get, update } from 'firebase/database';
 import db from '../firebase';
 import { auth, createUserWithEmailAndPassword, signInWithEmailAndPassword, setDoc, doc } from '../firebase';
 import { Navigate, useNavigate } from 'react-router-dom';
+import Notification from './Notification';
 const Account = () => {
     const navigate = useNavigate();
     const [login, setLogin] = useState(true);
@@ -12,6 +13,8 @@ const Account = () => {
     const [diseaselist, setDiseaseList] = useState([]);
     const [processing, setProcessing] = useState(false);
     const [warning, setWarning] = useState('');
+    const [notification,setNotificationMessage] = useState('');
+    const [showToast,setShowToast] = useState(false);
     const [formData, setFormData] = useState({
         email: '',
         contact: '',
@@ -83,7 +86,9 @@ const Account = () => {
                     setProcessing(false);
                 }else{
                     navigate('/PatientPanel', { state: { email } });
-                    alert("Login patient Successful!");
+                    setNotificationMessage('Login patient Successful!')
+                    setShowToast(true);
+                    setTimeout(() => {setShowToast(false);}, 3000);
                     setProcessing(false);
                 }
             } catch (error) {
@@ -197,6 +202,7 @@ const Account = () => {
 
   return (
     <>
+        <Notification showToast={showToast} message={notification}/>
         <div className='account-container'>
             <div className='chose-type'>
                 <h2>{patlogin ? 'Doctor Account' : 'Patient Account'}</h2>
@@ -261,8 +267,33 @@ const Account = () => {
                                 <div className='input-container'>
                                     <label>Specialiesd In*</label>
                                     <select name='specialisation' onChange={handleChange} >
-                                        <option>Cancer</option>
-                                        <option>Dental</option>
+                                    <option value="">Select Specialization</option>
+                                        <option value="cancer">Oncologist (Cancer Specialist)</option>
+                                        <option value="dental">Dentist</option>
+                                        <option value="cardiology">Cardiologist (Heart Specialist)</option>
+                                        <option value="neurology">Neurologist (Brain & Nerve Specialist)</option>
+                                        <option value="orthopedic">Orthopedic Surgeon (Bone & Joint Specialist)</option>
+                                        <option value="pediatrics">Pediatrician (Child Specialist)</option>
+                                        <option value="dermatology">Dermatologist (Skin Specialist)</option>
+                                        <option value="psychiatry">Psychiatrist (Mental Health)</option>
+                                        <option value="gynecology">Gynecologist (Women's Health)</option>
+                                        <option value="endocrinology">Endocrinologist (Hormone Specialist)</option>
+                                        <option value="ophthalmology">Ophthalmologist (Eye Specialist)</option>
+                                        <option value="ent">ENT Specialist (Ear, Nose, Throat)</option>
+                                        <option value="urology">Urologist (Urinary System & Male Reproductive Health)</option>
+                                        <option value="nephrology">Nephrologist (Kidney Specialist)</option>
+                                        <option value="pulmonology">Pulmonologist (Lung Specialist)</option>
+                                        <option value="gastroenterology">Gastroenterologist (Digestive System)</option>
+                                        <option value="rheumatology">Rheumatologist (Arthritis & Autoimmune Diseases)</option>
+                                        <option value="radiology">Radiologist (Imaging & Scans)</option>
+                                        <option value="anesthesiology">Anesthesiologist (Pain Management & Surgery Anesthesia)</option>
+                                        <option value="hematology">Hematologist (Blood Disorders)</option>
+                                        <option value="infectious_disease">Infectious Disease Specialist</option>
+                                        <option value="plastic_surgery">Plastic Surgeon</option>
+                                        <option value="vascular_surgery">Vascular Surgeon (Blood Vessels & Circulation)</option>
+                                        <option value="proctology">Proctologist (Colon & Rectum Specialist)</option>
+                                        <option value="geriatrics">Geriatrician (Elderly Care)</option>
+                                        <option value="sports_medicine">Sports Medicine Specialist</option>
                                     </select>
                                 </div>
                                 <div className='input-container'>
