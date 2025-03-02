@@ -42,9 +42,6 @@ function App() {
           <Link to='/' onClick={closeMenu}>
             <i className="fa-solid fa-house"></i>Home
           </Link>
-          <Link to='/Account' onClick={closeMenu}>
-            <i className="fa-solid fa-user"></i>Account
-          </Link>
           <Link to='/bookappointment' onClick={closeMenu}>
             <i className="fa-solid fa-calendar-check"></i>Book Appointment
           </Link>
@@ -53,6 +50,9 @@ function App() {
           </Link>
           <Link to='/InstituteAction' onClick={closeMenu}>
             <i className="fa-solid fa-hospital"></i>Hospital
+          </Link>
+          <Link to='/Account' onClick={closeMenu}>
+            <i className="fa-solid fa-user"></i>Account
           </Link>
         </div>
       </header>
