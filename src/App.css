@@ -160,8 +160,6 @@ header {
   color: white;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -309,6 +307,7 @@ header {
   position: absolute;
   right: 0;
   margin-right: 30px;
+  margin-top: 30px;
   border-radius: 5px;
   display: flex;
   align-items: center;

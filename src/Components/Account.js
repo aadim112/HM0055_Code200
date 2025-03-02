@@ -81,15 +81,17 @@ const Account = () => {
                 localStorage.setItem("userType", userType);
                 console.log("local: ", localStorage.getItem('userType'))
                 if(patlogin){
-                    navigate('/DoctorPanel', { state: { email } });
-                    alert("Login Doctor Successful!");
+                    setNotificationMessage('Doctor Login Successfull!');
+                    setShowToast(true);
+                    setTimeout(() => {setShowToast(false);}, 1500);
+                    setTimeout(()=>{navigate('/DoctorPanel', { state: { email } })},1500)
                     setProcessing(false);
                 }else{
-                    navigate('/PatientPanel', { state: { email } });
-                    setNotificationMessage('Login patient Successful!')
+                    setNotificationMessage('Patient Login Successful!');
                     setShowToast(true);
-                    setTimeout(() => {setShowToast(false);}, 3000);
+                    setTimeout(() => {setShowToast(false);}, 1500);
                     setProcessing(false);
+                    setTimeout(()=> {navigate('/PatientPanel', { state: { email } })},1500)
                 }
             } catch (error) {
                 setWarning(error.message);
