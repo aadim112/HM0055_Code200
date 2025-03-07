@@ -1,17 +1,37 @@
 {
   "files": {
-    "main.css": "/HM0055_Code200/static/css/main.184cd645.css",
-    "main.js": "/HM0055_Code200/static/js/main.51a58e55.js",
-    "static/js/453.375511ee.chunk.js": "/HM0055_Code200/static/js/453.375511ee.chunk.js",
+    "main.css": "/HM0055_Code200/static/css/main.4d7beee9.css",
+    "main.js": "/HM0055_Code200/static/js/main.1c5c10e2.js",
+    "static/js/453.09395fc4.chunk.js": "/HM0055_Code200/static/js/453.09395fc4.chunk.js",
     "static/media/home-bg.jpg": "/HM0055_Code200/static/media/home-bg.780df2f268b43ea6e3aa.jpg",
     "static/media/logo-main.png": "/HM0055_Code200/static/media/logo-main.af2127e837e1f70791cd.png",
+    "static/media/Role-based dashboard.jpg": "/HM0055_Code200/static/media/Role-based dashboard.6e0bc07e71f31ea6e925.jpg",
+    "static/media/medicine-reminder.jpg": "/HM0055_Code200/static/media/medicine-reminder.62208d10126d8dde1113.jpg",
+    "static/media/inventory.jpg": "/HM0055_Code200/static/media/inventory.82f0bb8f61e50c1e456b.jpg",
+    "static/media/nurse1.jpg": "/HM0055_Code200/static/media/nurse1.3be734b463b00cc9677c.jpg",
+    "static/media/dry-skin-dermatology.png": "/HM0055_Code200/static/media/dry-skin-dermatology.f30776c481cbd54a59a4.png",
+    "static/media/appointment-scheduling.jpg": "/HM0055_Code200/static/media/appointment-scheduling.f94c4f04007194bb5ae2.jpg",
+    "static/media/cancer.png": "/HM0055_Code200/static/media/cancer.a8f758dbb71c3b3d0032.png",
+    "static/media/psychiatry.png": "/HM0055_Code200/static/media/psychiatry.039cf331ae0aa4780eca.png",
+    "static/media/cardiology.png": "/HM0055_Code200/static/media/cardiology.64fc4e57eee2baba3384.png",
+    "static/media/checkup-obstetrics.png": "/HM0055_Code200/static/media/checkup-obstetrics.ef698cf17565682cbbc4.png",
+    "static/media/pulmonology.png": "/HM0055_Code200/static/media/pulmonology.9405b794d0cc0b4eab96.png",
+    "static/media/doctor.jpg": "/HM0055_Code200/static/media/doctor.9f701e325786ee330040.jpg",
+    "static/media/neurology.png": "/HM0055_Code200/static/media/neurology.1432d7ed6f2578b6816b.png",
+    "static/media/gastroenterology.png": "/HM0055_Code200/static/media/gastroenterology.21676242026e6fd6b7b4.png",
+    "static/media/general Physician.png": "/HM0055_Code200/static/media/general Physician.198514fb51cdf16232bc.png",
+    "static/media/orthopedics.png": "/HM0055_Code200/static/media/orthopedics.2f376dd251e9130daf5c.png",
+    "static/media/urology.png": "/HM0055_Code200/static/media/urology.6a23ad17d5b1c4bfcd26.png",
+    "static/media/tooth.png": "/HM0055_Code200/static/media/tooth.68e4b39573f5cde3ee1b.png",
+    "static/media/paedritics.png": "/HM0055_Code200/static/media/paedritics.ca6badb01c835b7c264e.png",
+    "static/media/sore-throat-Ent.png": "/HM0055_Code200/static/media/sore-throat-Ent.7ad3cefe2b7502d8b631.png",
     "index.html": "/HM0055_Code200/index.html",
-    "main.184cd645.css.map": "/HM0055_Code200/static/css/main.184cd645.css.map",
-    "main.51a58e55.js.map": "/HM0055_Code200/static/js/main.51a58e55.js.map",
-    "453.375511ee.chunk.js.map": "/HM0055_Code200/static/js/453.375511ee.chunk.js.map"
+    "main.4d7beee9.css.map": "/HM0055_Code200/static/css/main.4d7beee9.css.map",
+    "main.1c5c10e2.js.map": "/HM0055_Code200/static/js/main.1c5c10e2.js.map",
+    "453.09395fc4.chunk.js.map": "/HM0055_Code200/static/js/453.09395fc4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.184cd645.css",
-    "static/js/main.51a58e55.js"
+    "static/css/main.4d7beee9.css",
+    "static/js/main.1c5c10e2.js"
   ]
 }
