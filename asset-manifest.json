@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HM0055_Code200/static/css/main.4d7beee9.css",
-    "main.js": "/HM0055_Code200/static/js/main.1c5c10e2.js",
+    "main.css": "/HM0055_Code200/static/css/main.5850ae2b.css",
+    "main.js": "/HM0055_Code200/static/js/main.865dae05.js",
     "static/js/453.09395fc4.chunk.js": "/HM0055_Code200/static/js/453.09395fc4.chunk.js",
     "static/media/home-bg.jpg": "/HM0055_Code200/static/media/home-bg.780df2f268b43ea6e3aa.jpg",
     "static/media/logo-main.png": "/HM0055_Code200/static/media/logo-main.af2127e837e1f70791cd.png",
@@ -26,12 +26,12 @@
     "static/media/paedritics.png": "/HM0055_Code200/static/media/paedritics.ca6badb01c835b7c264e.png",
     "static/media/sore-throat-Ent.png": "/HM0055_Code200/static/media/sore-throat-Ent.7ad3cefe2b7502d8b631.png",
     "index.html": "/HM0055_Code200/index.html",
-    "main.4d7beee9.css.map": "/HM0055_Code200/static/css/main.4d7beee9.css.map",
-    "main.1c5c10e2.js.map": "/HM0055_Code200/static/js/main.1c5c10e2.js.map",
+    "main.5850ae2b.css.map": "/HM0055_Code200/static/css/main.5850ae2b.css.map",
+    "main.865dae05.js.map": "/HM0055_Code200/static/js/main.865dae05.js.map",
     "453.09395fc4.chunk.js.map": "/HM0055_Code200/static/js/453.09395fc4.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4d7beee9.css",
-    "static/js/main.1c5c10e2.js"
+    "static/css/main.5850ae2b.css",
+    "static/js/main.865dae05.js"
   ]
 }
